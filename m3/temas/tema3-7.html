@@ -1,0 +1,125 @@
+<p class="subtema">Ejercicio</p>
+
+<div id="instrucciones">
+
+	<div class="row">
+		<div class="col-md-6">
+			<img src="img/tema3/recuerde.png" class="img-responsive img-center" style="height: 200px" alt="">
+		</div>
+		<div class="col-md-6">
+			<p>Las búsquedas en los otros buscadores son de manera similar a como se mostraron aquí, por lo que usted no tendrá ningún problema en realizarlo.</p>
+			<p>Lo invitamos a realizar el siguiente ejercicio, que no tiene evaluación, sin embargo le servirá de práctica para identificar los conceptos que están relacionados con Buscar información en Internet. Está muy sencillo, y lo puede realizar cuantas veces quiera. ¡Ánimo!</p>
+		</div>
+		
+	</div>
+	<div class="contenedor-gris">
+		<p><strong>Buscando Información en Internet</strong></p>
+		<button id="btnEmpezar" type="button" class="btn btn-default">Empezar ejercicio</button>
+		<em>Haga clic en el botón para realizar el ejercicio.</em>
+	</div>
+	
+</div>
+
+
+<div id="ejercicio" class="row ocultar">
+	<div class="row contenedor-gris">
+		<p><strong>Objetivo: </strong>Identificar los conceptos que están relacionados una búsqueda en Internet. </p>
+		<p><strong>Instrucciones:</strong></p>
+		<ol>
+			<li>Lea cada uno de los planteamientos que se le presentan. </li>
+			<li>Seleccione la opción que responda correctamente a cada pregunta. </li>
+			<li>Al finalizar el ejercicio verifique las respuestas correctas haciendo clic en el botón "Revisar" </li>
+		</ol>
+	</div>
+
+	<p><strong>1. Los _________________son las páginas más visitadas de la Red ya que sirven como punto de partida para obtener cualquier información que se encuentre en Internet. </strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Servidores de Internet</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) Los motores de búsqueda</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">c) Los equipos periféricos de Internet
+</label>
+		</div>
+	</div>
+
+	<p><strong>2. La opción ____________________ permite elegir entre realizar la búsqueda en toda la Web, en páginas en español o en páginas de México. </strong></p>
+	<div class="row">
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">a) Busqueda avanzada</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">b) Líneas de resultados</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">c) Entorno de búsqueda</label>
+		</div>
+	</div>
+
+	<p><strong>3. La _________________ permite ingresar la palabra o palabras a buscar.  </strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Buscar en</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) Caja de búsqueda</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">c) Entorno de búsqueda</label>
+		</div>
+	</div>
+
+	<p><strong>4. Esta opción muestra el resultado de la búsqueda que está compuesto por varias líneas, en la primera aparece el título de la página Web encontrada.</strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Buscar en</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) Caja de búsqueda</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Líneas de resultados</label>
+		</div>
+	</div>
+
+
+	<div class="row text-center rojo ocultar" id="revision">
+		<p><strong>Las respuestas correctas aparecen con verde.</strong></p>
+	</div>
+	<div class="row text-center">
+		<button id="btnRevisar" type="button" class="btn btn-primary botonRevisar">Revisar</button>
+	</div>
+</div>
+
+
+
+
+<p>&nbsp;</p>
+
+<div class="wrap"></div>
+
+
+
+<script>
+	$(document).ready(function(){
+
+		$("#btnEmpezar").click(function(){
+			$("#ejercicio").show();
+			$("#instrucciones").hide();
+			
+		});
+
+		$("#btnRevisar").click(function(){
+			$("#revision").show();
+			$("#btnRevisar").hide();
+			var x = document.getElementsByClassName("correcto");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.backgroundColor = "#4CAF50";
+			}
+		});
+	});
+</script>

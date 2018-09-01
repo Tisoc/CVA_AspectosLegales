@@ -1,0 +1,45 @@
+
+<div class="divide50"></div>
+<p>Ahora toca el turno de empezar a navegar por Internet, pero antes... </p>
+<p class="text-center"><strong>¿Qué se puede hacer en Internet?</strong></p>
+<p>Internet ofrece diferentes servicios, de la siguiente lista elija el servicio que usted considere el más importante que podemos encontrar en Internet. Al finalizar haga clic en Revisar.</p>
+
+<div class="contenedor-gris">
+	<div class="text-center">
+		<p><img src="img/ic_mouse.gif" alt="">Seleccione la respuesta que considere adecuada</p>
+	</div>
+	<p><strong>El servicio más importante que ofrece Internet es:</strong></p>
+	<div class="correcto">
+		<input type="radio"> Consultar la World Wide Web (www)
+	</div>
+	<div >
+		<input type="radio"> Consulta de Servicios Públicos
+	</div>
+	<div >
+		<input type="radio"> Acceso a Bases de datos
+	</div>
+	<div >
+		<input type="radio"> Oir la radio, webcams, ver videos
+	</div>
+	<div >
+		<input type="radio"> Mensajería instantánea
+	</div>
+
+	<button type="button" class="btn btn-success" id="btnRevisar">Revisar</button>
+</div>
+
+
+<div class="wrap"></div>
+
+<script>
+	$(document).ready(function(){
+
+		$("#btnRevisar").click(function(){
+			var x = document.getElementsByClassName("correcto");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.backgroundColor = "#4CAF50";
+			}
+		});
+	});
+</script>

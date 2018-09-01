@@ -1,0 +1,128 @@
+<p class="subtema">Ejercicio</p>
+<div id="instrucciones" class="row contenedor-gris">
+	<p><strong>¡Muy bien! ¿Listo para el siguiente ejercicio?</strong></p>
+	<p>Vamos a practicar todo lo que has aprendido de la Tierra, sus capas y la atmósfera.</p>
+	<p>El siguiente ejercicio no tiene evaluación, pero le servirá para comprobar lo que ha aprendido.</p>
+
+	<p><strong>La Tierra</strong></p>
+	<button id="btnEmpezar" type="button" class="btn btn-default">Empezar ejercicio</button>
+	<em>Haga clic en el botón para realizar el ejercicio.</em>
+</div>
+
+
+<div id="ejercicio" class="row ocultar">
+	<div class="row contenedor-gris">
+		<p><strong>Objetivo: </strong>Identificar qué respuesta es la correcta para cada pregunta acerca de la Tierra y sus diferentes capas.  </p>
+		<p><strong>Instrucciones:</strong></p>
+		<ol>
+			<li>Lea los enunciados que a continuación se muestran.</li>
+			<li>Observe que cada uno tiene tres opciones de respuesta.</li>
+			<li>Seleccione aquella respuesta que le parezca más acertada.</li>
+			<li>Al finalizar, haga clic en el botón "Revisar"</li>
+		</ol>
+	</div>
+
+	<p><strong> 1. ¿Qué es la presión atmosférica? </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Procesador de palabras</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) Las bases de datos</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Las hojas de cálculo</label>
+		</div>
+	</div>
+
+	<p><strong>2. ¿Cúales son los dos planetas que estan más cerca del Sol? </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Las bases de datos</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) El procesador de palabras</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">c) Las hojas de cálculo</label>
+		</div>
+	</div>
+
+	<p><strong>3. ¿Por que eventos se caracterizó el comienzo de la Tierra? </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Las hojas de cálculo</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) El procesador de palabras</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Los presentadores</label>
+		</div>
+	</div>
+
+	<p><strong>4. ¿Qué es una reacción quimica?</strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Software multimedia</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) El procesador de palabras</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Software de comunicación</label>
+		</div>
+	</div>
+
+	<p><strong>5. ¿Cúal es el orden correcto de las capas de La Tierra de la más exterior a la más interior? </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Hoja de cálculo</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) Base de datos</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">c) Software de comunicación</label>
+		</div>
+	</div>
+	<div class="row text-center rojo ocultar" id="revision">
+		<p><strong>Las respuestas correctas aparecen con verde.</strong></p>
+	</div>
+	<div class="row text-center rojo">
+		<p><strong>Al finalizar el ejercicio, le invitamos a que continúe con: Módulo 2 La Célula</strong></p>
+	</div>
+	<div class="row text-center">
+		<button id="btnRevisar" type="button" class="btn btn-primary botonRevisar">Revisar</button>
+	</div>
+</div>
+
+
+
+
+<p>&nbsp;</p>
+
+<div class="wrap"></div>
+
+
+
+<script>
+	$(document).ready(function(){
+
+		$("#btnEmpezar").click(function(){
+			$("#ejercicio").show();
+			$("#instrucciones").hide();
+
+		});
+
+		$("#btnRevisar").click(function(){
+			$("#revision").show();
+			$("#btnRevisar").hide();
+			var x = document.getElementsByClassName("correcto");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.backgroundColor = "#4CAF50";
+			}
+		});
+	});
+</script>

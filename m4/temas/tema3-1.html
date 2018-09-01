@@ -1,0 +1,40 @@
+<div class="divide50"></div>
+
+<p>Ha llegado el momento de profundizar en el servicio más importante que ofrece hoy en día el Internet, </p>
+
+<div class="contenedor-gris">
+    <p class="text-center"><strong>¿Recuerda cuál es?</strong></p>
+    <div class="row" id="botones">
+        <div class="col-md-3 col-md-offset-2">
+            <button type="button" id="btnSi" class="btn btn-success" style="width:100%">Si</button>
+        </div>
+        <div class="col-md-3 col-md-offset-2">
+            <button type="button" id="btnNo" class="btn btn-danger" style="width:100%">No</button>
+        </div>
+    </div>
+    <div id="clicSi" hidden>
+        <p><strong>¡Excelente!</strong></p>
+        <p>Como lo revisamos en el Tema 2. Buscar información en la Web es el Servicio más importante que ofrece hoy en día Internet.</p>
+        <p>Durante este tema revisaremos los elementos necesarios para buscar, bajar e imprimir Información de Internet.</p>
+    </div>
+
+    <div id="clicNo" hidden>
+        <p><strong>¡Despreocúpese!</strong></p>
+        <p>Como lo revisamos en el Tema 2. Buscar información en la Web es el Servicio más importante que ofrece hoy en día Internet.</p>
+        <p>Durante este tema revisaremos los elementos necesarios para buscar, bajar e imprimir Información de Internet.</p>
+    </div>
+</div>
+<div class="wrap"></div>
+
+<script>
+    $(document).ready(function(){
+        $("#btnSi").click(function(){
+            $("#botones").hide();
+            $("#clicSi").show();
+        });
+        $("#btnNo").click(function(){
+            $("#botones").hide();
+            $("#clicNo").show();
+        });
+    });
+</script>

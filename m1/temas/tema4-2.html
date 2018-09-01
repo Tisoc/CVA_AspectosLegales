@@ -1,0 +1,114 @@
+<p class="subtema">Ejercicio</p>
+<div id="instrucciones" class="row contenedor-gris">
+	<p><strong>¡Muy bien! ¿Listo para el siguiente ejercicio?</strong></p>
+	<p>Vamos a practicar todo lo que has aprendido de los conceptos introductorios.</p>
+	<p>El siguiente ejercicio no tiene evaluación, pero le servirá para comprobar lo que ha aprendido.</p>
+
+	<p><strong>Conceptos Introductorios</strong></p>
+	<button id="btnEmpezar" type="button" class="btn btn-default">Empezar ejercicio</button>
+	<em>Haga clic en el botón para realizar el ejercicio.</em>
+</div>
+
+
+<div id="ejercicio" class="row ocultar">
+	<div class="row contenedor-gris">
+		<p><strong>Objetivo: </strong>Identificar qué respuesta es la correcta para cada pregunta acerca de Organismos de Consultas, Personas Morales y Físicas. </p>
+		<p><strong>Instrucciones:</strong></p>
+		<ol>
+			<li>Lea los enunciados que a continuación se muestran.</li>
+			<li>Observe que cada uno tiene tres opciones de respuesta.</li>
+			<li>Seleccione aquella respuesta que le parezca más acertada.</li>
+			<li>Al finalizar, haga clic en el botón "Revisar"</li>
+		</ol>
+	</div>
+
+	<p><strong> 1. ¿Qué es una Persona Física?  </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Toda persona que perciba ingresos y pueda contraer derechos y obligaciones fiscales.</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) Una organización compuesta por varias personas físicas con o sin fines de lucro.</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Toda persona que tiene la capacidad de contraer derechos y obligaciones, en materia fiscal.</label>
+		</div>
+	</div>
+
+	<p><strong>2. ¿Qué es una Persona Moral?  </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Toda persona que tiene la capacidad de contraer derechos y obligaciones, en materia fiscal.</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) Una organización compuesta por varias personas físicas con o sin fines de lucro.</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">c) Toda persona que perciba ingresos y pueda contraer derechos y obligaciones fiscales.</label>
+		</div>
+	</div>
+
+	<p><strong>3. ¿Cuál es un ejemplo de Persona Moral? </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">a) Una organización compuesta por varias personas físicas con o sin fines de lucro.</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) Toda persona que perciba ingresos y pueda contraer derechos y obligaciones fiscales.</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Fundación o Empresa</label>
+		</div>
+	</div>
+
+	<p><strong>4. ¿Cuál es un ejemplo de Persona Física? </strong></p>
+	<div class="row">
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">a) Toda persona que perciba ingresos y pueda contraer derechos y obligaciones fiscales.</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) Toda persona que tiene la capacidad de contraer derechos y obligaciones, en materia fiscal.</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">c) Fundación o Empresa</label>
+		</div>
+	</div>
+
+	<div class="row text-center rojo ocultar" id="revision">
+		<p><strong>Las respuestas correctas aparecen con verde.</strong></p>
+	</div>
+	<div class="row text-center rojo">
+		<p><strong>Al finalizar el ejercicio, le invitamos a que continúe con: Sección 3 Geografía y Clima de la Tierra</strong></p>
+	</div>
+	<div class="row text-center">
+		<button id="btnRevisar" type="button" class="btn btn-primary botonRevisar">Revisar</button>
+	</div>
+</div>
+
+
+<p>&nbsp;</p>
+
+<div class="wrap"></div>
+
+
+
+<script>
+	$(document).ready(function(){
+
+		$("#btnEmpezar").click(function(){
+			$("#ejercicio").show();
+			$("#instrucciones").hide();
+
+		});
+
+		$("#btnRevisar").click(function(){
+			$("#revision").show();
+			$("#btnRevisar").hide();
+			var x = document.getElementsByClassName("correcto");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.backgroundColor = "#4CAF50";
+			}
+		});
+	});
+</script>

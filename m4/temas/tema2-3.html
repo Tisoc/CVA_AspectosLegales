@@ -1,0 +1,104 @@
+<p class="subtema">Ejercicio</p>
+<div id="instrucciones" class="row contenedor-gris">
+	<p><strong>¡Muy bien! ¿Listo para el siguiente ejercicio?</strong></p>
+	<p>Vamos a practicar todo lo que has aprendido de los conceptos introductorios.</p>
+	<p>El siguiente ejercicio no tiene evaluación, pero le servirá para comprobar lo que ha aprendido.</p>
+
+	<p><strong>Conceptos Introductorios</strong></p>
+	<button id="btnEmpezar" type="button" class="btn btn-default">Empezar ejercicio</button>
+	<em>Haga clic en el botón para realizar el ejercicio.</em>
+</div>
+
+
+<div id="ejercicio" class="row ocultar">
+	<div class="row contenedor-gris">
+		<p><strong>Objetivo: </strong>Identificar qué respuesta es la correcta para cada pregunta acerca del RFC. </p>
+		<p><strong>Instrucciones:</strong></p>
+		<ol>
+			<li>Lea los enunciados que a continuación se muestran.</li>
+			<li>Observe que cada uno tiene tres opciones de respuesta.</li>
+			<li>Seleccione aquella respuesta que le parezca más acertada.</li>
+			<li>Al finalizar, haga clic en el botón "Revisar"</li>
+		</ol>
+	</div>
+
+	<p><strong>1. No son obligatorios los permisos y licencias   </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">Verdadero</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">Falso</label>
+		</div>
+	</div>
+
+	<p><strong>2. Los trabajadores no deben de estar inscritos en el IMSS  </strong></p>
+	<div class="row">
+		<div class="radio">
+				<label><input type="radio" name="optradio">Verdadero</label>
+		</div>
+		<div class="radio correcto">
+				<label><input type="radio" name="optradio">Falso</label>
+		</div>
+	</div>
+
+	<p><strong>3. La existencia y regulaciones de contrato laboral es importante   </strong></p>
+	<div class="row">
+		<div class="radio correcto">
+				<label><input type="radio" name="optradio">Verdadero</label>
+		</div>
+		<div class="radio">
+				<label><input type="radio" name="optradio">Falso</label>
+		</div>
+	</div>
+
+
+
+	<p><strong>4. Los permisos y licencias nunca expiran  </strong></p>
+	<div class="row">
+		<div class="radio">
+  			<label><input type="radio" name="optradio">Verdadero</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">Falso</label>
+		</div>
+	</div>
+
+	<div class="row text-center rojo ocultar" id="revision">
+		<p><strong>Las respuestas correctas aparecen con verde.</strong></p>
+	</div>
+	<div class="row text-center rojo">
+		<p><strong>Al finalizar el ejercicio, le invitamos a que continúe con: Sección 3 Geografía y Clima de la Tierra</strong></p>
+	</div>
+	<div class="row text-center">
+		<button id="btnRevisar" type="button" class="btn btn-primary botonRevisar">Revisar</button>
+	</div>
+</div>
+
+
+<p>&nbsp;</p>
+
+<div class="wrap"></div>
+
+
+
+<script>
+	$(document).ready(function(){
+
+		$("#btnEmpezar").click(function(){
+			$("#ejercicio").show();
+			$("#instrucciones").hide();
+
+		});
+
+		$("#btnRevisar").click(function(){
+			$("#revision").show();
+			$("#btnRevisar").hide();
+			var x = document.getElementsByClassName("correcto");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.backgroundColor = "#4CAF50";
+			}
+		});
+	});
+</script>

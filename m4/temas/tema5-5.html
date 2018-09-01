@@ -1,0 +1,130 @@
+<p class="subtema">Ejercicio</p>
+
+<div id="instrucciones">
+
+	<p>Lo invitamos a realizar el siguiente ejercicio, que no tiene evaluación, sin embargo le servirá de práctica para identificar los conceptos relacionados con la Seguridad en Internet. Está muy sencillo, y lo puede realizar cuantas veces quiera. ¡Ánimo!
+</p>
+	<div class="contenedor-gris">
+		<p><strong>Seguridad en Internet</strong></p>
+		<button id="btnEmpezar" type="button" class="btn btn-default">Empezar ejercicio</button>
+		<em>Haga clic en el botón para realizar el ejercicio.</em>
+	</div>
+	
+</div>
+
+
+<div id="ejercicio" class="row ocultar">
+	<div class="row contenedor-gris">
+		<p><strong>Objetivo: </strong>Identificar los conceptos relacionados con la Seguridad en Internet. </p>
+		<p><strong>Instrucciones:</strong></p>
+		<ol>
+			<li>Lea cada uno de los planteamientos que se le presentan. </li>
+			<li>Seleccione la opción que responda correctamente a cada pregunta. </li>
+			<li>Al finalizar el ejercicio verifique las respuestas correctas haciendo clic en el botón "Revisar" </li>
+		</ol>
+	</div>
+
+	<p><strong>1. Pequeños programas capaces de infectar una computadora y las computadoras que esten en comunicación con ella</strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Antivirus</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">b) Spyware</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Virus
+</label>
+		</div>
+	</div>
+
+	<p><strong>2. Son programas que pueden identificar y eliminar los virus existentes en alguna computadora </strong></p>
+	<div class="row">
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">a) Antivirus</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">b) Explorador</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">c) Norton</label>
+		</div>
+	</div>
+
+	<p><strong>3. Es un ejemplo de antivirus  </strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Microsoft Word</label>
+		</div>
+		
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) Avast</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">c) Firewall</label>
+		</div>
+	</div>
+
+	<p><strong>4. Es un progrmaa que junta información de una computadora y sin el consentimiento del usuario transmite esta información a otra computadora</strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Virus</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">b) Spyware</label>
+		</div>
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">c) Firewall</label>
+		</div>
+	</div>
+	
+	<p><strong>5. Termino en inglés que en español significa: Muro entre tu computadora e Internet</strong></p>
+	<div class="row">
+		<div class="radio ">
+  			<label><input type="radio" name="optradio">a) Virus</label>
+		</div>
+		<div class="radio">
+  			<label><input type="radio" name="optradio">b) Spyware</label>
+		</div>
+		<div class="radio correcto">
+  			<label><input type="radio" name="optradio">c) Firewall</label>
+		</div>
+	</div>
+
+	<div class="row text-center rojo ocultar" id="revision">
+		<p><strong>Las respuestas correctas aparecen con verde.</strong></p>
+	</div>
+	<div class="row text-center">
+		<button id="btnRevisar" type="button" class="btn btn-primary botonRevisar">Revisar</button>
+	</div>
+</div>
+
+
+
+
+<p>&nbsp;</p>
+
+<div class="wrap"></div>
+
+
+
+<script>
+	$(document).ready(function(){
+
+		$("#btnEmpezar").click(function(){
+			$("#ejercicio").show();
+			$("#instrucciones").hide();
+			
+		});
+
+		$("#btnRevisar").click(function(){
+			$("#revision").show();
+			$("#btnRevisar").hide();
+			var x = document.getElementsByClassName("correcto");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.backgroundColor = "#4CAF50";
+			}
+		});
+	});
+</script>

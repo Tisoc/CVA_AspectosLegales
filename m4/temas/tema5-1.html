@@ -1,0 +1,58 @@
+<div class="divide50"></div>
+
+<p>Ahora usted ya cuenta con los conocimientos necesarios para Navegar en Internet. Piense por un momento... ¿Considera que Navegar en Internet puede resultar un riesgo cuando no se tienen las medidas necesarias para la computadora que estemos utilizando? </p>
+
+<div class="contenedor-gris">
+    <div class="row" id="botones">
+        <div class="col-md-3 col-md-offset-2">
+            <button type="button" id="btnSi" class="btn btn-success" style="width:100%">Si</button>
+        </div>
+        <div class="col-md-3 col-md-offset-2">
+            <button type="button" id="btnNo" class="btn btn-danger" style="width:100%">No</button>
+        </div>
+    </div>
+    <div id="clicSi" hidden>
+        <p><strong>¡Muy bien!</strong> Navegar en Internet a veces es un riesgo cuando no se tienen las medidas necesarias de seguridad para la computadora que estamos utilizando, ya que puede ser "contagiada" por algún virus o bien puede ser que esté siendo "espiada" por algún otro programa.</p>
+        <p>Durante este tema conoceremos acerca de los virus y antivirus así como de los programas "espías".</p>
+        <p><strong>¡Continuemos!</strong></p>
+    </div>
+
+    <div id="clicNo" hidden>
+        <p>La respuesta es Si. Navegar en Internet a veces es un riesgo cuando no se tienen las medidas necesarias de seguridad para la computadora que estamos utilizando, ya que puede ser "contagiada" por algún virus o bien puede ser que esté siendo "espiada" por algún otro programa.</p>
+        <p>Durante este tema conoceremos acerca de los virus y antivirus así como de los programas "espías".</p>
+        <p><strong>¡Continuemos!</strong></p>
+    </div>
+</div>
+
+<p><strong>En este tema conoceremos los siguientes temas:</strong></p>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <img src="img/tema5/antivirus.png" class="img-responsive img-center" style="width: 100px" alt="">
+        <p><strong>Virus y antivirus</strong></p>
+    </div>
+
+    <div class="col-md-4">
+        <img src="img/tema5/spyware.png" class="img-responsive img-center" style="width: 100px" style="width: 100px"alt="">
+        <p><strong>Spyware y antispyware</strong></p>
+    </div>
+
+    <div class="col-md-4">
+        <img src="img/tema5/firewall.png" class="img-responsive img-center" style="width: 100px" alt="">
+        <p><strong>Firewall</strong></p>
+    </div>
+</div>
+<div class="wrap"></div>
+
+<script>
+    $(document).ready(function(){
+        $("#btnSi").click(function(){
+            $("#botones").hide();
+            $("#clicSi").show();
+        });
+        $("#btnNo").click(function(){
+            $("#botones").hide();
+            $("#clicNo").show();
+        });
+    });
+</script>
